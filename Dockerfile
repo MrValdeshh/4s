@@ -6,7 +6,6 @@ LABEL version="1.1"
 
 # Expose ports
 EXPOSE 8080
-EXPOSE 8388
 
 # Copy config
 COPY config.json /etc/v2ray/config.json
