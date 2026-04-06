@@ -63,7 +63,7 @@
     },
 
     {
-      "port": 8388,
+      "port": 8080,
       "protocol": "shadowsocks",
       "settings": {
         "method": "chacha20-ietf-poly1305",
