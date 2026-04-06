@@ -64,12 +64,17 @@
 
     {
       "port": 8388,
-      "listen": "0.0.0.0",
       "protocol": "shadowsocks",
       "settings": {
         "method": "chacha20-ietf-poly1305",
         "password": "MrValdez123",
-        "network": "tcp,udp"
+        "network": "tcp"
+      },
+      "streamSettings": {
+        "network": "ws",
+        "wsSettings": {
+          "path": "/MrValdez/Shadowsocks"
+        }
       }
     }
 
