@@ -1,0 +1,83 @@
+{
+  "log": {
+    "loglevel": "warning"
+  },
+
+  "inbounds": [
+
+    {
+      "port": 8080,
+      "listen": "0.0.0.0",
+      "protocol": "vless",
+      "settings": {
+        "clients": [
+          {
+            "id": "69f3a7b2-6d44-4e91-8a3f-2b7e5d9c1f69"
+          }
+        ],
+        "decryption": "none"
+      },
+      "streamSettings": {
+        "network": "ws",
+        "wsSettings": {
+          "path": "/MrValdez/Vless"
+        }
+      }
+    },
+
+    {
+      "port": 8080,
+      "protocol": "vmess",
+      "settings": {
+        "clients": [
+          {
+            "id": "69f3a7b2-6d44-4e91-8a3f-2b7e5d9c1f69",
+            "alterId": 0
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "wsSettings": {
+          "path": "/MrValdez/Vmess"
+        }
+      }
+    },
+
+    {
+      "port": 8080,
+      "protocol": "trojan",
+      "settings": {
+        "clients": [
+          {
+            "password": "MrValdez"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "wsSettings": {
+          "path": "/MrValdez/Trojan"
+        }
+      }
+    },
+
+    {
+      "port": 8388,
+      "listen": "0.0.0.0",
+      "protocol": "shadowsocks",
+      "settings": {
+        "method": "chacha20-ietf-poly1305",
+        "password": "MrValdez123",
+        "network": "tcp,udp"
+      }
+    }
+
+  ],
+
+  "outbounds": [
+    {
+      "protocol": "freedom"
+    }
+  ]
+}
